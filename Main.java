@@ -1,5 +1,7 @@
-public class Main {
-    public static void main(String[] args) {
+public class Main 
+{
+    public static void main(String[] args) 
+    {
         
         // 1. Initialize the first game
         Scoreboard game = new Scoreboard("Red", "Blue"); // 
@@ -58,5 +60,62 @@ public class Main {
         // 12. Verify the original game is unaffected
         // Expected: "1-8-Red"
         System.out.println(game.getScore()); // 
+
+        public class Scoreboard
+        {
+            private String team1;
+            private String team2;
+            private int score1;
+            private int score2;
+            private boolean team1Active;
+
+            public Scoreboard(String name1, String name2)
+            {
+                name1 = team1
+                name2 = team2
+                score1 = 0;
+                score2 = 0;
+                team1Active = false;
+            }
+            public void recordPlay(int points)
+            {
+                if (points > 0)
+                {
+                    if (team1Active = true)
+                    {
+                        score1 += points;
+                    }   
+                    else if (team1Active = false)
+                    {
+                        score2 += points;
+                    }
+                }
+                else
+                {
+                    if (team1Active == true)
+                    {
+                        team1Active = false;
+                    }
+                    else if (team1Active == false)
+                    {
+                        team1Active = true
+                    }
+                }
+            }
+            public void getScore()
+            {
+                String curName; 
+                if (team1Active == true)
+                {
+                    curname = team1;
+                }
+                else if (team1Active == false)
+                {
+                    curname = team2;
+                }
+                return score1 + " - " + score2 + " - " + curName;
+            }
+    
+        }
     }
 }
